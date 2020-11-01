@@ -16,7 +16,7 @@ THe best performing model was from the AutoML run - VotingEnsemble classifaction
 
 Using the Logistic Regression provided by scikit-learn to train and test the data.
 The data is split was split using 30% as test data and 70% as training set. The `inverse of regularization strength` is used. This was used to obtain the best hyperparameter for the LogisticRegression within the range of 0.1 and 1.0 in uniform space.
-BanditPolicy BanditPolicy, an early termination policy which is based on slack factor/slack amount and evaluation_interval. The ` evaluation_interval = 3, slack_amount = 0.2` However, the policy terminates any runs if the primary metric is not within the specified ``slack factor/slack amount`. This is done with respect to the best performinding training model.
+BanditPolicy BanditPolicy, an early termination policy which is based on slack factor/slack amount and evaluation_interval. The ` evaluation_interval = 3, slack_amount = 0.2` However, the policy terminates any runs if the primary metric is not within the specified `slack factor/slack amount`. This is done with respect to the best performinding training model.
 Additionally, hyperparamters used include `estimator=est,hyperparameter_sampling=ps,  max_concurrent_runs=4,  max_total_runs=15,             primary_metric_goal=PrimaryMetricGoal.MAXIMIZE, primary_metric_name='Accuracy'`
 
 **What are the benefits of the parameter sampler you chose?**
