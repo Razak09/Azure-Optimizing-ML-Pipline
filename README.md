@@ -27,15 +27,17 @@ The early termination policy helps to increase computational efficiency. This st
 
 The best AutoMLmodel generated was the Voting Ensemble classifier. This model has an acccuracy of 91.79% and an l1 ratio of 0.38775. This helps to check overfitting in the model. The model also uses the inverse scaling learning rate which helps to converge to optimal solution without sacrificing computational effeiciency. The model automl_config takes in the training dataset, the cross validation is set to 4.  
 
-The best AutoML model has the underlisted parameters:
- [(alpha=4.693930612244897, class_weight='balanced', eta0=0.001, l1_ratio=0.3877551020408163, earning_rate='constant', loss='squared_hinge', max_iter=1000, n_jobs=1, penalty='none', power_t=0.3333333333333333, random_state=None, tol=0.001))]
-
 ## Pipeline comparison
 **Compare the two models and their performance. What are the differences in accuracy? In architecture? If there was a difference, why do you think there was one?**
+
+From both experiments, the architecture of the pipelines are the same. The model accuracy for the AutoML is 91.79% where as the model accuracy for hyperdrive is 91.54%. This difference in performance of the two models could be attributed to the fact that, The hyperdrive mode is able to search for hyperparameters for just one algorithm whiles the autoML has the flexibilty to search for parameters for more than one algorithms and then selects the best model from the pool of model using the various hyperparameters searched.
 
 ## Future work
 **What are some areas of improvement for future experiments? Why might these improvements help the model?**
 
+The areas that would need improvement in future experiments would be to do further data cleaning and data pre-processing. The presence of outliers in the dataset affects predictions results. Therefore when further data cleaning is done. Additionall, future experiments should aim at using balanced dataset since using a balanced dataset would improve the prediction reliability and accuracy.
+
 ## Proof of cluster clean up
 **If you did not delete your compute cluster in the code, please complete this section. Otherwise, delete this section.**
 **Image of cluster marked for deletion**
+
